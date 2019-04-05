@@ -8,7 +8,7 @@
   <meta name="author" content="R.Williams">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-<script type="text/javascript" src="js/regcontrol.js"></script>
+<script type="text/javascript" src="js/tabcontrol.js"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <nav>File | Action | Logs</nav>
   </header>
   
-	<h1><center>Vehicle Registration Form</center></h1>
+	<h1><center>What you want</center></h1>
      
   <form class="searchbox_1" action="">
     <input type="search" class="search_1" placeholder="Search" />
@@ -26,176 +26,29 @@
  
   <div class="module">
     
-		<form class="form">
+		<form id="formA">
 			<ul>
-			  <li id="tab0" class="tab activeTab" onclick = "tabClick(0);"><img src="https://i.imgur.com/Fk1Urva.png" alt="" class="icon"/>Registration Details</li>
-			  <li id="tab1"class="tab" onclick = "tabClick(1);"><img src="https://i.imgur.com/ZsRgIDD.png" alt="" class="icon"/>Motor Vehicle</li>
-			  <li id="tab2"class="tab" onclick = "tabClick(2);"><img src="https://i.imgur.com/34Q50wo.png" alt="" class="icon"/>Drivers and Insurance</li>
-			  <li id="tab3"class="tab" onclick = "tabClick(3);"><img src="https://i.imgur.com/LCCJ06E.png" alt="" class="icon"/>Process Registration</li>
+			  <li id="tab0" class="tab activeTab" onclick = "tabClick(0);"><img src="https://i.imgur.com/Fk1Urva.png" alt="" class="icon"/>Tab 1</li>
+			  <li id="tab1"class="tab" onclick = "tabClick(1);"><img src="https://i.imgur.com/ZsRgIDD.png" alt="" class="icon"/>Tab 2</li>
+			  <li id="tab2"class="tab" onclick = "tabClick(2);"><img src="https://i.imgur.com/34Q50wo.png" alt="" class="icon"/>Tab 3</li>
+			  <li id="tab3"class="tab" onclick = "tabClick(3);"><img src="https://i.imgur.com/LCCJ06E.png" alt="" class="icon"/>Tab 4</li>
 			</ul>
 			
-				<div class="area-tab">
-					<ul>
+				<div id="first-tab" class="area-tab">
+					<p><center>this is Tab Area 1<center></p>
+				<div style="overflow:auto;">
 				
-						<li id="li_1" >
-							<label class="description" for="element_1">Vehicle Registration Number </label>
-							<div>
-								<input id="element_1" name="element_1" class="textbox" type="text" maxlength="255" value=""/>
-							</div><p class="guidelines" id="guide_1"><small>Enter Vehicle Registration Number</small></p>
-						</li>		
-						<li id="li_2" >
-						<label class="description" for="element_2">Owner </label>
-						<div>
-							<input id="element_2" name="element_2" class="textbox" type="text" maxlength="255" value=""/>
-						</div>
-					</li>		<li id="li_5" >
-						<label class="description" for="element_5">Registration Type </label>
-						<span>
-						<input id="element_5_1" name="element_5" class="element radio" type="radio" value="1" />
-							<label class="choice" for="element_5_1">Permenant</label>
-							<input id="element_5_2" name="element_5" class="element radio" type="radio" value="2" />
-							<label class="choice" for="element_5_2">Temporary</label>
-
-					</span><p class="guidelines" id="guide_5"><small>Choose 1</small></p>
-					</li>		<li id="li_3" >
-						<label class="description" for="element_3">Start Date </label>
-						<span>
-						<input id="element_3_1" name="element_3_1" class="textbox" size="2" maxlength="2" value="" type="text"> /
-						<label for="element_3_1">MM</label>
-					</span>
-						<span>
-						<input id="element_3_2" name="element_3_2" class="textbox" size="2" maxlength="2" value="" type="text"> /
-						<label for="element_3_2">DD</label>
-					</span>
-						<span>
-						<input id="element_3_3" name="element_3_3" class="textbox" size="4" maxlength="4" value="" type="text">
-						<label for="element_3_3">YYYY</label>
-					</span>
-
-						<span id="calendar_3">
-						<img id="cal_img_3" class="datepicker" src="calendar.gif" alt="Pick a date.">
-					</span>
-						<script type="text/javascript">
-							Calendar.setup({
-								inputField	 : "element_3_3",
-								baseField    : "element_3",
-								displayArea  : "calendar_3",	
-								button		 : "cal_img_3",
-								ifFormat	 : "%B %e, %Y",
-								onSelect	 : selectDate
-							});
-						</script>
-
-					</li>		<li id="li_4" >
-						<label class="description" for="element_4">Expiration Date </label>
-						<span>
-						<input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value="" type="text"> /
-						<label for="element_4_1">MM</label>
-					</span>
-						<span>
-						<input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value="" type="text"> /
-						<label for="element_4_2">DD</label>
-					</span>
-						<span>
-						<input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value="" type="text">
-						<label for="element_4_3">YYYY</label>
-					</span>
-
-						<span id="calendar_4">
-						<img id="cal_img_4" class="datepicker" src="calendar.gif" alt="Pick a date.">
-					</span>
-						<script type="text/javascript">
-							Calendar.setup({
-								inputField	 : "element_4_3",
-								baseField    : "element_4",
-								displayArea  : "calendar_4",
-								button		 : "cal_img_4",
-								ifFormat	 : "%B %e, %Y",
-								onSelect	 : selectDate
-							});
-						</script>
-
-					</li>		<li id="li_6" >
-						<label class="description" for="element_6">Status </label>
-						<div>
-							<select class="element select medium" id="element_6" name="element_6">
-								<option value="" selected="selected"></option>
-								<option value="1" >Active</option>
-								<option value="2" >Suspended</option>
-								<option value="3" >Flagged - MTW</option>
-								<option value="4" >Flagged - Law Enforcement</option>
-								<option value="5" >Inactive</option>
-
-							</select>
-						</div>
-					</li>		<li id="li_7" >
-						<label class="description" for="element_7">Registration Category </label>
-						<div>
-							<select class="element select medium" id="element_7" name="element_7">
-								<option value="" selected="selected"></option>
-								<option value="1" >Regular</option>
-								<option value="2" >Diplomat</option>
-								<option value="3" >Public Service Vehicle</option>
-								<option value="4" >State Owned</option>
-
-							</select>
-						</div>
-					</li>		<li id="li_8" >
-						<label class="description" for="element_8">Regular Category </label>
-						<span>
-						<input id="element_8_1" name="element_8" class="element radio" type="radio" value="1" />
-							<label class="choice" for="element_8_1">Private Car</label>
-							<input id="element_8_2" name="element_8" class="element radio" type="radio" value="2" />
-							<label class="choice" for="element_8_2">Commercial</label>
-							<input id="element_8_3" name="element_8" class="element radio" type="radio" value="3" />
-							<label class="choice" for="element_8_3">Motorcycle</label>
-							<input id="element_8_4" name="element_8" class="element radio" type="radio" value="4" />
-							<label class="choice" for="element_8_4">Bicycle</label>
-						</span>
-					</li>		
-					
-					<li id="li_9" >
-						<label class="description" for="element_9">Public Service Vehicles Category </label>
-						<div>
-							<select class="element select medium" id="element_9" name="element_9">
-								<option value="" selected="selected"></option>
-								<option value="1" >Route Taxi</option>
-								<option value="2" >Minibus</option>
-								<option value="3" >Maxi Taxi</option>
-								<option value="4" >Limosine</option>
-								<option value="5" >Coach</option>
-								<option value="6" >Hired Vehicle</option>
-								<option value="7" >Bus</option>
-								<option value="8" >Omnibus</option>
-
-							</select>
-						</div>
-					</li>		<li id="li_10" >
-						<label class="description" for="element_10">Government Owned Category </label>
-						<div>
-							<select class="element select medium" id="element_10" name="element_10">
-								<option value="" selected="selected"></option>
-								<option value="1" >General</option>
-								<option value="2" >Law Enforcement</option>
-								<option value="3" >Special</option>
-								<option value="4" >Public Transportation</option>
-
-							</select>
-						</div>
-					</li>
-
-			     <div style="overflow:auto;">
-					<div style="float:right;">
+				<div style="float:right;">
 						<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
 						<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
 					</div>
 				 </div>
 					</ul>
-				</div>
+				 </div>
 				
 			
 			<div class="area-tab">
-			<p><center>this is tab area 2<center></p>
+			<p><center>this is Tab Area 2<center></p>
 			 <div style="overflow:auto;">
 					<div style="float:right;">
 						<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -205,7 +58,7 @@
 			</div>
 			
 			<div class="area-tab">
-			<p><center>this is tab area 3<center></p>
+			<p><center>this is Tab Area 3<center></p>
 			 <div style="overflow:auto;">
 					<div style="float:right;">
 						<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -215,31 +68,28 @@
 			</div>
 			
 			<div class="area-tab">
-			<p><center>this is tab area 4<center></p>
+			<p><center>this is Tab Area 4<center></p>
 			 <div style="overflow:auto;">
 					<div style="float:right;">
 						<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-						<button type="button" id="nextBtn" onclick="nextPrev(1)">Finish</button>
+						<button type="button" id="nextBtn" onclick="nextPrev(1)">-----</button>
 					</div>
 				 </div>
 			</div>
 					
-        </form>
-   
+     </form> 
+     
   </div>
-</div>
-		 
-	 
-	 
   <footer>
     <script type="application/javascript">
        var theDate = new Date();
 	   document.write("<center><p>©  GrassRoots Development® "  + theDate.getFullYear() + " All Rights Reserved </p></center>");
     </script> 
-	
-
-  </footer>
-
+  </footer>  
+  
+  
+ </div>
+	 
  </body>
 
 </html>

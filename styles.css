@@ -150,6 +150,7 @@ a{
   background-color:rgba(0,0,0,.1);
 }
 
+
 .activeTab{
   background:#fff;
 }
@@ -176,6 +177,10 @@ a{
 .area-tab{
 	                                      /*border: 1px solid gray;*/
 	 display: none;
+}
+
+#first-tab{
+	display: block;
 }
 
 .textbox{
